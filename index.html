@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+ <html lang="en" dir="ltr">
+   <head>
+     <meta charset="utf-8">
+<!-- FONTAWESOME -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<!-- FONT ROBOTO -->
+     <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,900" rel="stylesheet">
+<!-- MY CSS -->
+     <link rel="stylesheet" href="style.css">
+<!-- JS: MOMENT -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<!-- JS: JQUERY -->
+     <script
+       src="http://code.jquery.com/jquery-3.3.1.min.js"
+       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+       crossorigin="anonymous">
+     </script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+     <!-- JS: HANDLEBARS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js" charset="utf-8"></script>
+     <!-- JS: MY TEMPLATE -->
+     <script id="dayTemplate" type="text/x-handlebars-template">
+       <div data-date="{{ machineDate }}" id="day">{{ date }}</div>
+     </script>
+     <!-- JS: MY JS -->
+     <script type="text/javascript" src="script.js"></script>
+     <title>Calendario</title>
+   </head>
+  <body>
+    <div class="container">
+      <header>
+        <i class="fas fa-chevron-circle-left"></i>
+        <div class="monthContainer">
+          <h3 id="year">anno</h3>
+          <h1 id="monthName">Gennaio</h1>
+          <h4 id="dayCount">giorni</h4>
+        </div>
+        <i class="fas fa-chevron-circle-right"></i>
+      </header>
+      <div class="daysContainer">
+          <div id="daysList">
+          </div>
+      </div>
+    </div>
+  </body>
+ </html>

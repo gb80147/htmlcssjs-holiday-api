@@ -1,0 +1,68 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  background: #e2e2e2;
+}
+
+header{
+  height: 100px;
+  width: 100%;
+  background: #4d678e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header i{
+  font-size: 22px;
+}
+
+.monthContainer{
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 15px;
+}
+
+#monthName{
+  font-weight: 900;
+}
+
+#dayCount{
+  font-weight: 300;
+}
+
+.daysContainer{
+  width: 100%;
+  height: calc(100% - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#daysList{
+  display: flex;
+  flex-flow: wrap;
+  width: 85%;
+  height: 80%;
+}
+
+#day{
+  border: 1px solid #4d678e;
+  width: calc(100% / 7);
+  padding-left: 5px;
+  min-height: 50px;
+  overflow: hidden;
+}
+
+.red{
+  color: red;
+}

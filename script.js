@@ -152,6 +152,37 @@ function printTitle(year, month) {
   h4DayCount.text("1-" + dayCount)
 }
 
+function prevMonth(year, month) {
+
+  month--;
+  deleteDays()
+  printTitle(year, month);
+  printDays(year, month);
+  printHolidays(year, month);
+
+  return month;
+}
+
+function nextMonth(year, month) {
+
+  month++;
+  deleteDays()
+  printTitle(year, month);
+  printDays(year, month);
+  printHolidays(year, month);
+
+  return month;
+}
+
+function deleteDays() {
+
+  var monthName = $("#monthName");
+  monthName.text("");
+
+  var day = $("#daysList div");
+  day.remove();
+}
+
 function init(){
 
   var year = 2018;
@@ -160,5 +191,23 @@ function init(){
   printTitle(year, month);
   printDays(year, month);
   printHolidays(year, month);
+
+  var leftArrow = $(".leftArrow");
+  leftArrow.click( function() {
+
+    if (month > 0) {
+
+      month = prevMonth(year, month)
+    }
+  })
+
+  var rightArrow = $(".rightArrow");
+  rightArrow.click( function() {
+
+    if (month < 11) {
+
+      month = nextMonth(year, month)
+    }
+  })
 }
 $(document).ready(init);

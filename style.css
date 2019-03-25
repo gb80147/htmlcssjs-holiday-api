@@ -56,11 +56,15 @@ header i{
 }
 
 #day{
-  border: 1px solid #4d678e;
-  width: calc(100% / 7);
+  width: calc(100% / 8);
+  padding-top: 5px;
   padding-left: 5px;
-  min-height: 50px;
+  min-height: 60px;
   overflow: hidden;
+  /* background: #acb6bc50; */
+  background: #4d678e50;
+  margin: 1px;
+  border-radius: 4px;
 }
 
 .red{
